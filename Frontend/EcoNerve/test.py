@@ -9,12 +9,12 @@ import os
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS to allow requests from React
+CORS(app)  # Enable CORS for frontend requests
 
-# Load your trained model
+# Load trained model
 model = load_model("resnet50_model.h5")
 
-# Class labels for predictions
+# Original class labels from model
 class_labels = {
     0: 'battery',
     1: 'cardboard',
@@ -25,6 +25,9 @@ class_labels = {
     6: 'plastic',
     7: 'shoes'
 }
+
+# Indices that should be mapped to "other"
+map_to_other = {0, 1, 2, 7}
 
 # Preprocess image for ResNet50
 def preprocess_image(image_path):
@@ -37,11 +40,24 @@ def preprocess_image(image_path):
 # Predict the class of the image
 def predict_image(image_path):
     preprocessed_img = preprocess_image(image_path)
-    prediction = model.predict(preprocessed_img)
-    predicted_class_idx = np.argmax(prediction)
-    return class_labels[predicted_class_idx]
+    prediction = model.predict(preprocessed_img)[0]
+    predicted_class_idx = int(np.argmax(prediction))
+    confidence = float(np.max(prediction))
 
-# API endpoint to handle image classification
+    if predicted_class_idx in map_to_other:
+        expected_label = class_labels[predicted_class_idx]
+        return {
+            "prediction": "other",
+            "expected": expected_label,
+            "confidence": round(confidence, 3)
+        }
+
+    return {
+        "prediction": class_labels[predicted_class_idx],
+        "confidence": round(confidence, 3)
+    }
+
+# API endpoint
 @app.route("/predict", methods=["POST"])
 def predict():
     if "file" not in request.files:
@@ -55,10 +71,9 @@ def predict():
     file_path = os.path.join("static/uploads", file.filename)
     file.save(file_path)
 
-    predicted_label = predict_image(file_path)
-    return jsonify({"prediction": predicted_label})
+    result = predict_image(file_path)
+    return jsonify(result)
 
-# Run the app
+# Run app
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-

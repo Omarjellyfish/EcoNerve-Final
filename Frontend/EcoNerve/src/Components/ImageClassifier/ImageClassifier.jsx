@@ -48,7 +48,7 @@ const ImageClassifier = () => {
           Its goal is to promote better recycling habits by making it easier to recognize and sort waste properly.
         </p>
         <p>
-          The model was trained on a dataset of over <strong>10,000 images</strong> across multiple categories like plastic, paper, metal, glass, and organic waste.
+          The model was trained on a dataset of over <strong>6,000 images</strong> across multiple categories like plastic, paper, metal, glass, and organic waste.
         </p>
         <p>
         The system utilizes a ResNet50-based Convolutional Neural Network (CNN), achieving 96.8% accuracy, significantly improving classification performance

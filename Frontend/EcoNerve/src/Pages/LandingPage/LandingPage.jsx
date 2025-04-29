@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; 
-import "./LandingPage.css"; 
+import { useNavigate, Link } from "react-router-dom"; // Added Link
+import "./LandingPage.css";
 import femaleImage from "../../assets/female.png";
 import maleImage from "../../assets/male.png";
 
@@ -8,10 +8,9 @@ function LandingPage() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate("/testmodel"); 
+    navigate("/testmodel");
   };
 
-  // Array with team members and their descriptions
   const teamMembers = [
     { name: 'Ahlam Mostafa', description: 'A dedicated computer science student focusing on AI and sustainability.' },
     { name: 'Afaf Nader', description: 'Passionate about environmental science and innovative tech solutions.' },
@@ -24,7 +23,7 @@ function LandingPage() {
   return (
     <div className="landing-container">
       <div className="hero-section">
-        <div className="rotating-logo"></div> 
+        <div className="rotating-logo"></div>
         <div className="overlay">
           <h1 className="title">Let's Recycle for a Greener Tomorrow</h1>
           <p className="subtitle">
@@ -56,6 +55,12 @@ function LandingPage() {
           <li><strong>Environmentally Friendly:</strong> Contributes to cleaner communities.</li>
           <li><strong>Easy to Use:</strong> Just upload an image, and our model does the rest.</li>
         </ul>
+
+        {/* Register Now Link */}
+        <div className="register-now">
+          <p>Ready to make a difference?</p>
+          <Link to="/signup" className="cta-button">Register Now</Link>
+        </div>
       </div>
 
       <div className="team-section">
@@ -63,14 +68,8 @@ function LandingPage() {
         <p>We are a team of passionate computer science students committed to building a greener tomorrow.</p>
         <div className="team-cards">
           {teamMembers.map((member, index) => {
-            let imgSrc;
+            const imgSrc = index > 2 ? maleImage : femaleImage;
 
-            // If the index is greater than 2, use the male student image
-            if (index > 2) {
-              imgSrc = maleImage;
-            } else {
-              imgSrc = femaleImage;
-            }
             return (
               <div className="team-card" key={index}>
                 <img
@@ -79,7 +78,7 @@ function LandingPage() {
                   className="team-member-image"
                 />
                 <h4>{member.name}</h4>
-                <p>{member.description}</p> {/* Display description here */}
+                <p>{member.description}</p>
               </div>
             );
           })}
