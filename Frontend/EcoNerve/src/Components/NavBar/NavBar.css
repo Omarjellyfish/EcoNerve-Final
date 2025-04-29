@@ -1,0 +1,102 @@
+/* Prevent text selection for logo */
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    user-select: none;
+    font-size: 1.3rem;
+}
+
+/* Slimmer Flexbox layout for the navbar */
+.nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem; /* Reduced padding */
+    background-color: #ffffff;
+    color: #1f1f1f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side (logo) */
+.nav-left {
+    flex: 1;
+}
+
+/* Center section */
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 0.3s ease;
+}
+
+/* Authenticated layout */
+.nav-center.authenticated {
+    gap: 16px;
+}
+
+/* Right side (Login / Logout button) */
+.nav-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Link styles */
+.dashboard-link,
+.image-classifier-link {
+    font-size: 1rem; /* Smaller font */
+    text-decoration: none;
+    color: #333;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for links */
+.dashboard-link:hover,
+.image-classifier-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+/* Buttons */
+.auth-btn,
+.logout-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.9rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* More obvious hover effect */
+.auth-btn:hover,
+.logout-btn:hover {
+    background-color: #0056d2;
+    transform: translateY(-2px);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect */
+}
+
+/* Active state */
+.auth-btn:active,
+.logout-btn:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo image */
+.logo-image {
+    height: 40px; /* Slimmer height */
+    width: auto;
+    object-fit: contain;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}

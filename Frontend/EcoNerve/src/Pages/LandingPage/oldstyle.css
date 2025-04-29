@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .landing-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    height: 100%;
+    gap: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    background: linear-gradient(to bottom, #27ae60, #2980b9); /* Green to blue gradient for the landing page */
+    color: #ecf0f1; /* Light text color */
+  }
+  
+  /* Fade-in animation for the landing page content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: url('https://via.placeholder.com/1500x1000/27ae60/ffffff?text=Hero+Background') center/cover no-repeat;
+    background-blend-mode: overlay;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .rotating-logo {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/28/Recycle001.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    animation: spin 60s linear infinite, fadeIn 1s ease-out forwards;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+  
+  /* Overlay */
+  .overlay {
+    z-index: 1;
+    padding: 20px;
+  }
+  
+  /* Title and Subtitle */
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  /* CTA Button */
+  .cta-container {
+    margin-top: 30px;
+  }
+  
+  .cta-button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 20px 40px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.05);
+  }
+  
+  /* About Section */
+  .about-company {
+    display: grid;
+    justify-items: center;
+    padding: 80px 30px;
+    background: url('https://via.placeholder.com/1500x1000/34495e/ffffff?text=About+Us') center/cover no-repeat;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .about-company h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-company p {
+    font-size: 1.4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  /* Benefits Section */
+  .benefits {
+    display: grid;
+    justify-items: center;
+    padding: 80px 30px;
+    background: url('https://via.placeholder.com/1500x1000/1abc9c/ffffff?text=Benefits') center/cover no-repeat;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  .benefits h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+  
+  .benefits ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .benefits li {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }

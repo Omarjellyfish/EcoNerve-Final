@@ -15,8 +15,8 @@ function Dashboard() {
   const [totalRevenue, setTotalRevenue] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  const companyName = localStorage.getItem("companyName") || "jellyfish";
-  const token = localStorage.getItem("accessToken") || null;
+  const companyName = sessionStorage.getItem("companyName") || "jellyfish";
+  const token = sessionStorage.getItem("token") || null;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -68,6 +68,8 @@ function Dashboard() {
         setTotalRevenue(total);
       } catch (err) {
         console.error("Error fetching dashboard data:", err);
+        setChartData([]);
+        setTotalRevenue(0);
       } finally {
         setLoading(false);
       }
@@ -79,8 +81,11 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <h2 className="dash-title">Dashboard</h2>
+
       {loading ? (
         <p>Loading data...</p>
+      ) : chartData.length === 0 ? (
+        <p>No Data Registered.</p>
       ) : (
         <>
           <div className="summary">

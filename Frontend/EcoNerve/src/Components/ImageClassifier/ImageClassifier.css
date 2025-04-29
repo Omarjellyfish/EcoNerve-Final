@@ -1,62 +1,102 @@
-.image-classifier-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #f9f9f9;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-  }
-  
-  .image-classifier-container h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .image-classifier-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .image-classifier-container input[type="file"] {
-    margin-bottom: 15px;
-    padding: 8px;
-  }
-  
-  .image-classifier-container button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .image-classifier-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  .image-preview {
-    margin-top: 20px;
-    max-width: 100%;
-    border-radius: 12px;
-    border: 2px solid #ccc;
-  }
-  
-  .prediction-result {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #2b9348;
-  }
-  
-  .loading-text {
-    margin-top: 20px;
-    color: #888;
-  }
+.image-classifier-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
 
-  
+.model-info {
+  flex: 1 1 45%;
+  background: #e8f5e9;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.model-info h2 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+.model-info p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.classifier-section {
+  flex: 1 1 45%;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  margin: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.classifier-section h2 {
+  margin-bottom: 20px;
+  color: #2e7d32;
+  font-size: 24px;
+}
+
+.classifier-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.classifier-section input[type="file"] {
+  margin-bottom: 15px;
+  padding: 8px;
+  background: #e8f5e9;
+  border: 2px dashed #66bb6a;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.classifier-section button {
+  padding: 10px 20px;
+  background-color: #66bb6a;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.classifier-section button:hover {
+  background-color: #4caf50;
+}
+
+.image-preview {
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover; /* This makes the image cover the box nicely */
+  border-radius: 12px;
+  border: 2px solid #66bb6a;
+  background-color: #e8f5e9; /* Optional: light background while loading */
+}
+
+
+.prediction-result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.loading-text {
+  margin-top: 20px;
+  color: #388e3c;
+  font-weight: bold;
+}
