@@ -3,13 +3,12 @@ const router = express.Router();
 const { authenticateToken } = require("../../middelwares/authMiddleware");
 
 const {
-  getClassification,
   getClassificationsByCompanyHandler,
   addDummyClassificationHandler,
 } = require("../../controllers/classfication-controller/classfication-controller");
 
 // Example routes
-router.get("/classify", getClassification); // Classification route
+
 router.get(
   "/getClassfication/:companyName",
   getClassificationsByCompanyHandler

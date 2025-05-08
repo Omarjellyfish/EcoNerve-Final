@@ -71,7 +71,6 @@ const addDummyClassificationHandler = async (req, res) => {
 };
 
 module.exports = {
-  getClassification,
   getClassificationsByCompanyHandler,
   addDummyClassificationHandler,
 };

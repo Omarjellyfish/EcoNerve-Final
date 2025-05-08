@@ -15,7 +15,7 @@ function Dashboard() {
   const [totalRevenue, setTotalRevenue] = useState(0);
   const [loading, setLoading] = useState(true);
 
-  const companyName = sessionStorage.getItem("companyName") || "jellyfish";
+  const companyName = sessionStorage.getItem("companyName") ;
   const token = sessionStorage.getItem("token") || null;
 
   useEffect(() => {

@@ -9,6 +9,7 @@ import { Dashboard } from './Components/Dashboard/Dashboard';
 import ImageClassifier from './Components/ImageClassifier/ImageClassifier';
 import { NavBar } from './Components/NavBar/NavBar';
 import Footer from "./Components/Footer/Footer";
+import {PrivateRoute} from "./Components/PrivateRoute/PrivateRoute"
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/landingpage" element={<LandingPage />} />
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/dashboard" element={<PrivateRoute> <Dashboard /> </PrivateRoute>} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/testmodel" element={<ImageClassifier />} />
