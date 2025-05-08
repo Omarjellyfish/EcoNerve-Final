@@ -1,19 +1,18 @@
 /* Footer.css */
 
-/* General Footer Styling */
 footer {
-    background-color: #34495e; /* Dark blue-gray background for the footer */
-    color: #ecf0f1; /* Light text for contrast */
+    background-color: #34495e; 
+    color: #ecf0f1; 
     text-align: center;
     padding: 20px 0;
-    width: 100%; /* Ensures full width */
-    position: relative; /* Relative positioning to allow it to naturally appear at the bottom */
-    margin-top: auto; /* Ensures footer is pushed to the bottom when content is short */
+    width: 100%; 
+    position: relative; 
+    margin-top: auto; 
 }
 
-/* Footer Content Styling */
+
 .footer-content {
-    padding: 0 20px; /* Add some padding to make sure text doesn't touch the sides */
+    padding: 0 20px;
 }
 
 .footer-content p {
@@ -21,22 +20,22 @@ footer {
 }
 
 .footer-content p a {
-    color: #27ae60; /* Green color for links to match the theme */
+    color: #27ae60; 
     text-decoration: none;
 }
 
 .footer-content p a:hover {
     text-decoration: underline;
-    color: #2ecc71; /* Slightly brighter green on hover */
+    color: #2ecc71;/
 }
 
-/* Optional: For flexbox layout for the body or main container */
+
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    min-height: 100vh;
 }
 
 .main-content {
-    flex: 1; /* Takes up all remaining space, pushing the footer to the bottom */
+    flex: 1; 
 }

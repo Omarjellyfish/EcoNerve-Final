@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom'; // for navigation
-import axios from 'axios'; // Import axios
+import { useNavigate } from 'react-router-dom'; 
+import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './SignUpLogIn.css';
 
@@ -14,7 +14,7 @@ function SignUp() {
   const [companyNameError, setCompanyNameError] = useState('');
   const [registrationSuccess, setRegistrationSuccess] = useState(false);
 
-  const navigate = useNavigate(); // hook from react-router-dom
+  const navigate = useNavigate(); 
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -53,7 +53,7 @@ function SignUp() {
       setCompanyNameError('');
     }
 
-    // If all fields are valid, send the request
+
     if (valid) {
       try {
         const response = await axios.post('http://localhost:3000/user/register', {
@@ -72,12 +72,12 @@ function SignUp() {
 
           // Redirect to login after successful registration
           setTimeout(() => {
-            // Using navigate if it's still not working, try window.location.href
+            
             navigate('/login');
-            // Alternatively: window.location.href = '/login'; 
+            
           }, 1500);
 
-          // Optionally clear inputs
+          
           setEmail('');
           setPassword('');
           setCompanyName('');

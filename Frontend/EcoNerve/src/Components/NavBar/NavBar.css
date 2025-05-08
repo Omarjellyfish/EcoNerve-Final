@@ -14,18 +14,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1.5rem; /* Reduced padding */
+    padding: 0.5rem 1.5rem; 
     background-color: #ffffff;
     color: #1f1f1f;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Left side (logo) */
+
 .nav-left {
     flex: 1;
 }
 
-/* Center section */
+
 .nav-center {
     flex: 2;
     display: flex;
@@ -76,24 +76,23 @@
     transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* More obvious hover effect */
 .auth-btn:hover,
 .logout-btn:hover {
     background-color: #0056d2;
     transform: translateY(-2px);
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5); /* Glow effect */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
-/* Active state */
+
 .auth-btn:active,
 .logout-btn:active {
     transform: translateY(2px);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo image */
+
 .logo-image {
-    height: 40px; /* Slimmer height */
+    height: 40px;
     width: auto;
     object-fit: contain;
     background-color: transparent;

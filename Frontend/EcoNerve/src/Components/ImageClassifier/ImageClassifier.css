@@ -81,10 +81,10 @@
   margin-top: 20px;
   width: 300px;
   height: 300px;
-  object-fit: cover; /* This makes the image cover the box nicely */
+  object-fit: cover;
   border-radius: 12px;
   border: 2px solid #66bb6a;
-  background-color: #e8f5e9; /* Optional: light background while loading */
+  background-color: #e8f5e9;
 }
 
 

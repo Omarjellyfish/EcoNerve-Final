@@ -17,7 +17,7 @@
   border-radius: 6px;
   outline: none;
   transition: border-color 0.3s;
-  box-sizing: border-box; /* ✅ fix: makes width + padding + border fit perfectly */
+  box-sizing: border-box; 
 }
 
 .auth-window input:focus {
@@ -60,12 +60,12 @@
 }
 /* Style for the login link */
 .login-link {
-  color: #007bff; /* Blue color */
+  color: #007bff;
   font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .login-link:hover {
-  color: #0056b3; /* Darker blue when hovered */
+  color: #0056b3;
 }

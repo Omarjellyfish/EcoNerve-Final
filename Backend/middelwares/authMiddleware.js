@@ -20,7 +20,7 @@ function authenticateToken(req, res, next) {
     const decoded = jwt.verify(tokenPart, process.env.JWT_SECRET);
     req.user = decoded; // Attach decoded user info to `req`
 
-    next(); // Proceed to the next middleware
+    next(); 
   } catch (err) {
     return res.status(403).json({ message: "Invalid or Expired Token" });
   }

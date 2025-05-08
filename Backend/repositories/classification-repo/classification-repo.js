@@ -1,5 +1,4 @@
-const Classification = require("../../models/Classification-model"); // Adjust path if necessary
-
+const Classification = require("../../models/Classification-model");
 // Add a classification under a company
 const addClassification = async (companyName, classificationData) => {
   return await Classification.findOneAndUpdate(
@@ -23,7 +22,7 @@ const addDummyClassification = async () => {
       classifications: [
         {
           classification: "Plastic",
-          img: Buffer.from("dummyimage", "utf-8"), // Dummy image data, replace with actual image data if needed
+          img: Buffer.from("dummyimage", "utf-8"), // Dummy image data,
           createdAt: new Date(),
           value: 0.1, // Example value
         },
