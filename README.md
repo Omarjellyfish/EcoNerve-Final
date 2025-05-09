@@ -43,6 +43,7 @@ EcoNerve helps users properly sort waste materials using an AI model. By simply 
 
 ```bash
 cd backend
+npm install
 npm start
 ```
 
@@ -57,6 +58,7 @@ python test.py
 
 ```bash
 cd frontend/econerve
+npm install
 npm run dev
 ```
 
