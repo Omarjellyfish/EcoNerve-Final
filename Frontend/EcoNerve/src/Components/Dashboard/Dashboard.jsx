@@ -89,7 +89,7 @@ function Dashboard() {
       ) : (
         <>
           <div className="summary">
-            <h3>Total Revenue: ${totalRevenue.toFixed(2)}</h3>
+            <h3>Total Revenue: ${totalRevenue.toFixed(2)} EGP</h3>
           </div>
 
           <div className="chart-section">
@@ -98,9 +98,10 @@ function Dashboard() {
               <BarChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis dataKey="category" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="revenue" fill="#4CAF50" />
+<YAxis tickFormatter={(value) => `${value} EGP`} />
+<Tooltip formatter={(value) => [`${value.toFixed(2)} EGP`, 'Revenue']} />
+<Bar dataKey="revenue" fill="#4CAF50" />
+
               </BarChart>
             </ResponsiveContainer>
           </div>
