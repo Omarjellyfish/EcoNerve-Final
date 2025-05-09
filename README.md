@@ -62,19 +62,6 @@ npm run dev
 
 ---
 
-## 👥 Meet the Team
-
-A passionate group of students from Damietta University building tech for a greener tomorrow:
-
-- **Ahlam Mostafa** – Focused on AI and sustainability.
-- **Afaf Nader** – Environmental science and tech innovation.
-- **Salma Mohammed** – System analyst specialized in green projects.
-- **Omar Kandil** – Full-stack software engineer.
-- **Amr Azmal** – Networking and data science expert.
-- **Zeyad Tarek** – Mobile and iOS developer.
-
----
-
 ## 📄 License
 
 This project is open-source and developed solely for educational and research purposes as part of a graduation project.
