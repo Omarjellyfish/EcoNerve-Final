@@ -1,0 +1,56 @@
+♻️ EcoNerve
+EcoNerve is a web-based platform developed as a graduation project by students of Damietta University, Class of 2025. It uses artificial intelligence to identify and classify recyclable materials from images—contributing to a greener, more sustainable future.
+
+🌱 Project Overview
+EcoNerve helps users properly sort waste materials using an AI model. By simply uploading an image, the system identifies the material type (e.g., plastic, paper, metal), calculates estimated revenue, and presents useful classification statistics in a dynamic dashboard.
+
+✨ Features
+🔍 AI Material Classifier – Upload an image and receive instant feedback on the material type.
+
+📊 Interactive Dashboard – View revenue insights and classification statistics.
+
+🧠 Two Backend Systems:
+
+Express.js API – Manages user authentication and classification data.
+
+Flask Server – Handles AI model inference separately.
+
+🛠️ Technologies Used
+Frontend: React.js, CSS Modules
+
+Backend 1: Express.js (Node.js)
+
+Backend 2: Flask (Python)
+
+AI: Trained classification model using image input
+
+Database: MongoDB (or whichever is used in your backend)
+
+Routing: React Router DOM
+
+🖥️ Run Locally
+Make sure you have Node.js, npm, and Python installed on your system.
+
+1. Start the Express Backend
+bash
+نسخ
+تحرير
+cd backend
+npm start
+2. Start the Flask AI Inference Server
+bash
+نسخ
+تحرير
+cd frontend/econerve
+python test.py
+3. Start the React Frontend
+bash
+نسخ
+تحرير
+cd frontend/econerve
+npm run dev
+
+
+📄 License
+This project is open-source and developed solely for educational and research purposes as part of a graduation project.
+
