@@ -30,7 +30,7 @@ EcoNerve helps users properly sort waste materials using an AI model. By simply 
 - **Backend 1**: Express.js (Node.js)
 - **Backend 2**: Flask (Python)
 - **AI**: Trained classification model using image input
-- **Database**: MongoDB *(or whichever you use)*
+- **Database**: MongoDB 
 - **Routing**: React Router DOM
 
 ---
@@ -43,6 +43,7 @@ EcoNerve helps users properly sort waste materials using an AI model. By simply 
 
 ```bash
 cd backend
+npm install
 npm start
 ```
 
@@ -57,6 +58,7 @@ python test.py
 
 ```bash
 cd frontend/econerve
+npm install
 npm run dev
 ```
 
