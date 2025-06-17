@@ -17,7 +17,7 @@ function LandingPage() {
     { name: 'Salma Mohammed', description: 'ُExperienced System analyst, Speciallized in green projects .' },
     { name: 'Omar Kandil', description: 'A Software engineer and a fullstack developer. ' },
     { name: 'Amr Azmal', description: 'Experienced in networking and data science.' },
-    { name: 'Zeyad Tarek', description: 'An Experienced mobile and IOS developer with' },
+    { name: 'Zeyad Tarek', description: 'An Experienced mobile and IOS developer' },
   ];
 
   return (
